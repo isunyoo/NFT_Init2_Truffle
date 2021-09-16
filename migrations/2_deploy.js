@@ -3,5 +3,5 @@
 const ERC721PresetMinterPauserAutoId = artifacts.require("ERC721PresetMinterPauserAutoId");
 
 module.exports = function(deployer) {
-  deployer.deploy(ERC721PresetMinterPauserAutoId, "My NFT","NFT", "https://my-json-server.typicode.com/abcoathup/samplenft/tokens/");
+  deployer.deploy(ERC721PresetMinterPauserAutoId, "Kitty NFT","CAT_NFT", "https://ipfs.io/ipfs/QmR4bdamUTNypxDLdbhf7drpSJsmAARzwbfTnUAm4jKS2T?filename=1-GHOST_CAT.json");
 };

@@ -13,6 +13,6 @@
     "@openzeppelin/contracts": "^4.3.2"
   },
   "dependencies": {
-    "truffle": "^5.4.10"
+    "truffle": "^5.1.65"
   }
 }
