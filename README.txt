@@ -42,11 +42,3 @@ https://rinkeby-api.opensea.io/asset/[nft contract address]/[token id]/validate
 https://rinkeby-api.opensea.io/asset/0xEdf5d8e25Cd3789db541127b7E79B56Dfd957BAb/0/validate
 https://rinkeby-api.opensea.io/asset/0xEdf5d8e25Cd3789db541127b7E79B56Dfd957BAb/0
 
-
-
-secrets.json
-{
-    "mnemonic": "",
-    "projectId": "",
-    "infuraKey": ""
-}
