@@ -5,7 +5,6 @@ $ npm install --save-dev @truffle/hdwallet-provider
 $ npm install --save-dev @openzeppelin/contracts
 $ npm install truffle
 
-
 *** Deploy the contract to a local blockchain ***
 $ truffle compile
 $ truffle migrate --reset --compile-all --network development
@@ -20,9 +19,9 @@ truffle(development)> await nft.symbol()
 truffle(develop)> await nft.baseURI() //Depreciated function
 
 *** Mint ***
-truffle(development)> await nft.mint("0x82d85cF1331F9410F84D0B2aaCF5e2753a5afa82")
+truffle(development)> await nft.mint("Account_Name")
 truffle(development)> await nft.ownerOf(0)
-'0x82d85cF1331F9410F84D0B2aaCF5e2753a5afa82'
+'Account_Name'
 truffle(development)> await nft.tokenURI(0)
 'https://ipfs.io/ipfs/QmaSK3Gf6SuY8VLq8WKpX3Ri6ABJ6qkmMbNe7uhD6H2iSE?filename=0-GRUMPY_CAT.json0'
                         
@@ -32,13 +31,22 @@ $ npx truffle console --network rinkeby
 truffle(rinkeby)> migrate
 truffle(rinkeby)> nft = await ERC721PresetMinterPauserAutoId.deployed()
 truffle(rinkeby)> accounts
-truffle(rinkeby)> await nft.mint("0x82d85cF1331F9410F84D0B2aaCF5e2753a5afa82")
+truffle(rinkeby)> await nft.mint("Account_Name")
+truffle(rinkeby)> await nft.ownerOf(0)
+truffle(rinkeby)> await nft.tokenURI(0)
 
-*** OpenSea ***
+*** OpenSea metadata validation ***
 truffle(rinkeby)> nft.address
-'0x88B95525e8FA282335fb624AF8e5D680b770577E'
+'0xEdf5d8e25Cd3789db541127b7E79B56Dfd957BAb'
 https://rinkeby-api.opensea.io/asset/[nft contract address]/[token id]/validate
-https://ropsten-api.opensea.io/asset/0x88B95525e8FA282335fb624AF8e5D680b770577E/0/validate
-https://testnets-api.opensea.io/asset/0x88B95525e8FA282335fb624AF8e5D680b770577E/0/validate
-https://rinkeby-api.opensea.io/asset/0x88B95525e8FA282335fb624AF8e5D680b770577E/0/validate
-0x88B95525e8FA282335fb624AF8e5D680b770577E
+https://rinkeby-api.opensea.io/asset/0xEdf5d8e25Cd3789db541127b7E79B56Dfd957BAb/0/validate
+https://rinkeby-api.opensea.io/asset/0xEdf5d8e25Cd3789db541127b7E79B56Dfd957BAb/0
+
+
+
+secrets.json
+{
+    "mnemonic": "",
+    "projectId": "",
+    "infuraKey": ""
+}
